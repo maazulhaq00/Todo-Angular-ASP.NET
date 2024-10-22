@@ -1,4 +1,4 @@
 export interface ITodo {
     tid : number,
-    tname : string
+    tname : string 
 }

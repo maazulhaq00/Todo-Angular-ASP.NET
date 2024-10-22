@@ -1,1 +1,20 @@
-<p>todo works!</p>
+<div class="">
+
+</div>
+<form class="row g-3" [formGroup]="TaskForm" (ngSubmit)="handleTaskSubmit()">
+    <div class="col-3">
+      <label for="task">Enter Task</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control" id="task" formControlName="tname">
+    </div>
+    <div class="col-1">
+      <button type="submit" class="btn btn-dark mb-3">Add</button>
+    </div>
+  </form>
+
+  <ul>
+    <li *ngFor="let task of tasksList">
+        {{task.tname}}
+    </li>
+  </ul>

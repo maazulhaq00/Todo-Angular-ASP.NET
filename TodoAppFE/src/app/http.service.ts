@@ -12,16 +12,16 @@ export class HttpService {
   constructor(private httpClient: HttpClient) { }
 
   public getTodoes() {
-    return this.httpClient.get(this.baseUrl)
+    return this.httpClient.get<ITodo[]>(this.baseUrl)
   }
   public getTodoesById(tid: number) {
-    return this.httpClient.get(this.baseUrl + tid)
+    return this.httpClient.get<ITodo>(this.baseUrl + tid)
   }
   public createTodoes(todo: ITodo) {
-    return this.httpClient.post(this.baseUrl, todo)
+    return this.httpClient.post<ITodo>(this.baseUrl, todo)
   }
   public updateTodoes(tid: number, todo: ITodo) {
-    return this.httpClient.put(this.baseUrl + tid, todo)
+    return this.httpClient.put<ITodo>(this.baseUrl + tid, todo)
   }
   public deleteTodoes(tid: number) {
     return this.httpClient.delete(this.baseUrl + tid)
