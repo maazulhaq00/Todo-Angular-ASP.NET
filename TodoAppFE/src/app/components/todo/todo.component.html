@@ -2,19 +2,39 @@
 
 </div>
 <form class="row g-3" [formGroup]="TaskForm" (ngSubmit)="handleTaskSubmit()">
-    <div class="col-3">
-      <label for="task">Enter Task</label>
-    </div>
-    <div class="col-8">
-      <input type="text" class="form-control" id="task" formControlName="tname">
-    </div>
-    <div class="col-1">
-      <button type="submit" class="btn btn-dark mb-3">Add</button>
-    </div>
-  </form>
+  <div class="col-3">
+    @if(isEdit){
+    <label for="task">Edit Task</label>
+    }@else {
+    <label for="task">Enter Task</label>
+    }
+  </div>
+  <div class="col-8">
+    <input type="text" class="form-control" id="task" formControlName="tname">
+  </div>
+  @if(isEdit)
+  {
+  <div class="col-1">
+    <button type="submit" class="btn btn-dark mb-3">Update</button>
+  </div>
+  }@else {
+  <div class="col-1">
+    <button type="submit" class="btn btn-dark mb-3">Add</button>
+  </div>
+  }
 
-  <ul>
-    <li *ngFor="let task of tasksList">
-        {{task.tname}}
-    </li>
-  </ul>
+</form>
+
+<ul>
+  <li *ngFor="let task of tasksList">
+    {{task.tname}}
+
+    <button class="btn btn-dark" (click)="editTask(task.tid)">
+      <i class="fa-regular fa-pen-to-square"></i>
+    </button>
+
+    <button class="btn btn-danger" (click)="deleteTask(task.tid)">
+      <i class="fa-solid fa-trash"></i>
+    </button>
+  </li>
+</ul>

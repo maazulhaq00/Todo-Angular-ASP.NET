@@ -8192,11 +8192,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maaz ul haq\\Desktop\\TodoApp\\TodoAppAPI\\TodoAppAPI\\TodoAppAPI.csproj",
+      "projectUniqueName": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\TodoAppAPI.csproj",
       "projectName": "TodoAppAPI",
-      "projectPath": "C:\\Users\\maaz ul haq\\Desktop\\TodoApp\\TodoAppAPI\\TodoAppAPI\\TodoAppAPI.csproj",
+      "projectPath": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\TodoAppAPI.csproj",
       "packagesPath": "C:\\Users\\maaz ul haq\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maaz ul haq\\Desktop\\TodoApp\\TodoAppAPI\\TodoAppAPI\\obj\\",
+      "outputPath": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

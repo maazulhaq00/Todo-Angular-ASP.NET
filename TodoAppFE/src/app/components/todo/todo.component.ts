@@ -17,6 +17,8 @@ export class TodoComponent {
   httpService = inject(HttpService)
 
   tasksList: ITodo[] = []
+  isEdit : boolean = false;
+  tid : number = 0
 
   ngOnInit() {
     this.getAllTasks();
@@ -36,13 +38,40 @@ export class TodoComponent {
 
   handleTaskSubmit() {
     let todoObject: ITodo = {
-      tid: 0,
+      tid: this.isEdit ? this.tid : 0,
       tname: this.TaskForm.value.tname!
     }
 
-    this.httpService.createTodoes(todoObject).subscribe((result) => {
-      console.log(result);
-      this.TaskForm.patchValue({ tname: "" });
+    if(this.isEdit){
+      this.httpService.updateTodoes(this.tid, todoObject).subscribe((result) => {
+        console.log(result);
+        this.TaskForm.patchValue({ tname: "" });
+        this.getAllTasks()
+        this.isEdit = false;
+      })
+    }
+    else{
+      this.httpService.createTodoes(todoObject).subscribe((result) => {
+        console.log(result);
+        this.TaskForm.patchValue({ tname: "" });
+        this.getAllTasks()
+      })
+    }
+
+ 
+  }
+
+  editTask(tid:number){
+    this.isEdit = true
+    this.tid = tid
+
+    this.httpService.getTodoesById(tid).subscribe((result)=>{
+      this.TaskForm.patchValue(result);
+    })
+  }
+
+  deleteTask(tid:number){
+    this.httpService.deleteTodoes(tid).subscribe(()=>{
       this.getAllTasks()
     })
   }
