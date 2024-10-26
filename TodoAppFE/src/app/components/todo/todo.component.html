@@ -22,19 +22,31 @@
     <button type="submit" class="btn btn-dark mb-3">Add</button>
   </div>
   }
-
 </form>
 
 <ul>
   <li *ngFor="let task of tasksList">
-    {{task.tname}}
-
+   
+    @if(task.tstatus == 0){
+    <span>
+      {{task.tname}}
+    </span>
+    }@else{
+      <span style="background-color: gray;">
+        {{task.tname}}
+      </span>
+    }
+    
     <button class="btn btn-dark" (click)="editTask(task.tid)">
       <i class="fa-regular fa-pen-to-square"></i>
     </button>
 
     <button class="btn btn-danger" (click)="deleteTask(task.tid)">
       <i class="fa-solid fa-trash"></i>
+    </button>
+
+    <button class="btn btn-danger" (click)="doneTask(task.tid)">
+      Done
     </button>
   </li>
 </ul>

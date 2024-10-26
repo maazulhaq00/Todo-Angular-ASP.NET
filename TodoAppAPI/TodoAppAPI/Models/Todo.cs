@@ -7,5 +7,6 @@ namespace TodoAppAPI.Models
         [Key]
         public int tid { get; set; }
         public string tname { get; set; }
+        public int tstatus { get; set; }
     }
 }

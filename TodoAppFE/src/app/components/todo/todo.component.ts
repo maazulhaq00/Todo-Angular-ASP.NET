@@ -17,8 +17,9 @@ export class TodoComponent {
   httpService = inject(HttpService)
 
   tasksList: ITodo[] = []
-  isEdit : boolean = false;
-  tid : number = 0
+  isEdit: boolean = false;
+  tid: number = 0
+  tstatus: number = 0
 
   ngOnInit() {
     this.getAllTasks();
@@ -31,7 +32,7 @@ export class TodoComponent {
       console.log(this.tasksList);
     })
   }
-  
+
   TaskForm = this.formBuilder.group({
     tname: ['', [Validators.required]]
   })
@@ -39,10 +40,10 @@ export class TodoComponent {
   handleTaskSubmit() {
     let todoObject: ITodo = {
       tid: this.isEdit ? this.tid : 0,
-      tname: this.TaskForm.value.tname!
+      tname: this.TaskForm.value.tname!,
+      tstatus: this.isEdit ? this.tstatus : 0
     }
-
-    if(this.isEdit){
+    if (this.isEdit) {
       this.httpService.updateTodoes(this.tid, todoObject).subscribe((result) => {
         console.log(result);
         this.TaskForm.patchValue({ tname: "" });
@@ -50,7 +51,7 @@ export class TodoComponent {
         this.isEdit = false;
       })
     }
-    else{
+    else {
       this.httpService.createTodoes(todoObject).subscribe((result) => {
         console.log(result);
         this.TaskForm.patchValue({ tname: "" });
@@ -58,22 +59,30 @@ export class TodoComponent {
       })
     }
 
- 
   }
 
-  editTask(tid:number){
+  editTask(tid: number) {
     this.isEdit = true
     this.tid = tid
 
-    this.httpService.getTodoesById(tid).subscribe((result)=>{
-      this.TaskForm.patchValue(result);
+    this.httpService.getTodoesById(tid).subscribe((result) => {
+      this.tstatus = result.tstatus
+      this.TaskForm.patchValue({ tname: result.tname });
     })
   }
-
-  deleteTask(tid:number){
-    this.httpService.deleteTodoes(tid).subscribe(()=>{
+  
+  deleteTask(tid: number) {
+    this.httpService.deleteTodoes(tid).subscribe(() => {
       this.getAllTasks()
     })
   }
 
+  doneTask(tid: number) {
+    this.httpService.getTodoesById(tid).subscribe((result) => {
+      result.tstatus = 1;
+      this.httpService.updateTodoes(result.tid, result).subscribe((result) => {
+        this.getAllTasks()
+      })
+    })
+  }
 }

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6587D8AC-6807-472F-94C5-1C2A984DFD00}|TodoAppAPI\\TodoAppAPI.csproj|c:\\users\\maaz ul haq\\desktop\\todo\\todo-angular-asp.net\\todoappapi\\todoappapi\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6587D8AC-6807-472F-94C5-1C2A984DFD00}|TodoAppAPI\\TodoAppAPI.csproj|solutionrelative:todoappapi\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Migrations\\20241026133945_alterTodoesTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TodoAppAPI\\Migrations\\20241026133945_alterTodoesTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6587D8AC-6807-472F-94C5-1C2A984DFD00}|TodoAppAPI\\TodoAppAPI.csproj|c:\\users\\maaz ul haq\\desktop\\todo\\todo-angular-asp.net\\todoappapi\\todoappapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6587D8AC-6807-472F-94C5-1C2A984DFD00}|TodoAppAPI\\TodoAppAPI.csproj|solutionrelative:todoappapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +46,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "20241026133945_alterTodoesTable.cs",
+              "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Migrations\\20241026133945_alterTodoesTable.cs",
+              "RelativeDocumentMoniker": "TodoAppAPI\\Migrations\\20241026133945_alterTodoesTable.cs",
+              "ToolTip": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Migrations\\20241026133945_alterTodoesTable.cs",
+              "RelativeToolTip": "TodoAppAPI\\Migrations\\20241026133945_alterTodoesTable.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T13:39:46.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Todo.cs",
+              "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Models\\Todo.cs",
+              "RelativeDocumentMoniker": "TodoAppAPI\\Models\\Todo.cs",
+              "ToolTip": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Models\\Todo.cs",
+              "RelativeToolTip": "TodoAppAPI\\Models\\Todo.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T13:38:09.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TodoesController.cs",
               "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Controllers\\TodoesController.cs",
               "RelativeDocumentMoniker": "TodoAppAPI\\Controllers\\TodoesController.cs",
@@ -49,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Program.cs",
               "RelativeDocumentMoniker": "TodoAppAPI\\Program.cs",
@@ -60,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TodoAppAPI\\Models\\AppDbContext.cs",
@@ -71,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "20241019122914_CreateTable.cs",
               "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\Migrations\\20241019122914_CreateTable.cs",
               "RelativeDocumentMoniker": "TodoAppAPI\\Migrations\\20241019122914_CreateTable.cs",
@@ -82,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\maaz ul haq\\Desktop\\Todo\\Todo-Angular-ASP.NET\\TodoAppAPI\\TodoAppAPI\\appsettings.json",
               "RelativeDocumentMoniker": "TodoAppAPI\\appsettings.json",
